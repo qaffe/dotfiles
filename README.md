@@ -6,8 +6,8 @@ These are my own personal dotfiles that I am using currently. They were original
 
 ## REQUIREMENTS
 Please ensure you have the following installed on your system prior to attempting to use these dotfiles:
-- X11
-- BSPWM
+- Wayland
+- Sway
 - Zsh
 - Git
 - GNU Stow (Optional, but it's what I'm using to manage them)
