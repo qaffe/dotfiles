@@ -40,9 +40,18 @@ zstyle ':completion:*' list-colors '${(s.:.)LS_COLORS'
 # (I DON'T FEEL THE NEED TO RIGHT NOW, BUT CAN WITH BINDKEY)
 
 # Add custom aliases
-alias y='yazi'
 alias ls='ls --color'
 alias grep='grep --color=auto'
+
+# Yazi function
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	yazi "$@" --cwd-file="$tmp"
+	if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+		builtin cd -- "$cwd"
+	fi
+	rm -f -- "$tmp"
+}
 
 # Start starship
 export STARSHIP_CONFIG=~/.config/starship/starship.toml
