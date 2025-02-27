@@ -1,0 +1,109 @@
+format = """
+[╭](fg:separators)\
+[░▒▓](fg:background1)\
+$os\
+$shell\
+[](bg:background2 fg:background1)\
+$directory\
+[](bg:background3 fg:background2)\
+$git_branch\
+$git_status\
+[](bg:background4 fg:background3)\
+$cmd_duration\
+[](fg:background4)\
+$fill\
+[](fg:background5)\
+$jobs\
+[](bg:background5 fg:background6)\
+$time\
+[▓▒░](fg:background6)\
+$line_break\
+[╰ ](fg:separators)\
+$character\
+"""
+
+palette = 'qaffe_custom'
+add_newline = true
+
+[palettes.qaffe_custom]
+prompt_ok   = "#6eebff"
+prompt_err  = "#ff6e6e"
+text        = "#161514"
+separators  = "#d8d8d0"
+background1 = "#d1b3d1"
+background2 = "#e7d7e7"
+background3 = "#ffe6ff"
+background4 = "#ff9eff"
+background5 = "#ff9eff"
+background6 = "#ffe6ff"
+
+[os]
+disabled = false
+style = "fg:text bg:background1"
+format = "[ $symbol ]($style)"
+
+[shell]
+disabled = false
+style = "fg:text bg:background1"
+format = "[$indicator ]($style)"
+
+[os.symbols]
+Windows = "󰍲"
+Ubuntu = "󰕈"
+SUSE = ""
+Raspbian = "󰐿"
+Mint = "󰣭"
+Macos = "󰀵"
+Manjaro = ""
+Linux = "󰌽"
+Gentoo = "󰣨"
+Fedora = "󰣛"
+Alpine = ""
+Amazon = ""
+Android = ""
+Arch = "󰣇"
+Artix = "󰣇"
+EndeavourOS = ""
+CentOS = ""
+Debian = "󰣚"
+Redhat = "󱄛"
+RedHatEnterprise = "󱄛"
+Pop = ""
+
+[directory]
+style = "fg:text bg:background2"
+format = "[ $path ]($style)"
+truncation_length = 2
+truncation_symbol = ".../"
+truncate_to_repo = false
+
+[git_branch]
+symbol = ""
+style = "fg:text bg:background3"
+format = "[ $symbol $branch ]($style)"
+
+[git_status]
+style = "fg:text bg:background3"
+format = "[$all_status$ahead_behind ]($style)"
+
+[cmd_duration]
+style = "fg:text bg:background4"
+format = "[ took $duration ]($style)"
+
+[fill]
+symbol = "─"
+style = "fg:separators"
+
+[jobs]
+symbol = "⚙"
+style = "fg:text bg:background5"
+format = "[ $symbol ]($style)"
+
+[time]
+disabled = false
+style = "fg:text bg:background6"
+format = "[$time ♥ ]($style)"
+
+[character]
+success_symbol = "[▶](prompt_ok)"
+error_symbol = "[▶](prompt_err)"
