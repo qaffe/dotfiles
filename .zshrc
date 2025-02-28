@@ -40,7 +40,7 @@ zstyle ':completion:*' list-colors '${(s.:.)LS_COLORS'
 # (I DON'T FEEL THE NEED TO RIGHT NOW, BUT CAN WITH BINDKEY)
 
 # Add custom aliases
-alias ls='ls --color'
+alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 
 # Yazi function
