@@ -10,6 +10,7 @@ Please ensure you have the following installed on your system prior to attemptin
 - Sway
 - Zsh
 - Git
+- Hack fonts
 - GNU Stow (Optional, but it's what I'm using to manage them)
 
 ## SCREENSHOTS
