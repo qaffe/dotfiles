@@ -66,4 +66,4 @@ function y() {
 export STARSHIP_CONFIG=~/.config/starship/starship.toml
 eval "$(starship init zsh)"
 
-hyfetch
+echo "put something here"
