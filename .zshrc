@@ -56,3 +56,5 @@ function y() {
 # Start starship
 export STARSHIP_CONFIG=~/.config/starship/starship.toml
 eval "$(starship init zsh)"
+
+hyfetch

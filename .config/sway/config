@@ -63,6 +63,15 @@ output HDMI-A-2 mode 1920x1080@74.986hz position 0,0 transform 270
 
 ### Key bindings
 #
+# Custom:
+#
+    # Full screen screenshot
+    bindsym Print exec GRIM_DEFAULT_DIR=$HOME/Pictures/Screenshots/ grim -o $(swaymsg -t get_outputs | jq -r '.[] | select(.focused) | .name') | wl-copy --type "image/png"
+
+    # Selection screenshot
+    bindsym $mod+Print exec GRIM_DEFAULT_DIR=$HOME/Pictures/Screenshots/ grim -g "$(slurp)" | wl-copy
+
+#
 # Basics:
 #
     # Start a terminal
@@ -209,8 +218,6 @@ bindsym $mod+r mode "resize"
     # Special keys to adjust brightness via brightnessctl
     bindsym --locked XF86MonBrightnessDown exec brightnessctl set 5%-
     bindsym --locked XF86MonBrightnessUp exec brightnessctl set 5%+
-    # Special key to take a screenshot with grim
-    bindsym Print exec grim
 
 #
 # Status Bar:
