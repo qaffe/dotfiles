@@ -14,7 +14,7 @@ source "${ZINIT_HOME}/zinit.zsh"
 zinit light zsh-users/zsh-syntax-highlighting
 
 # Add syntax highlighting styling
-ZSH_HIGHLIGHT_STYLES[keyword]='fg=blue,bold'
+ZSH_HIGHLIGHT_STYLES[keyword]='fg=magenta,bold'
 ZSH_HIGHLIGHT_STYLES[string]='fg=green'
 ZSH_HIGHLIGHT_STYLES[variable]='fg=cyan'
 
@@ -23,7 +23,7 @@ ZSH_HIGHLIGHT_STYLES[variable]='fg=cyan'
 zinit light zsh-users/zsh-autosuggestions
 
 # Add auto suggestion styling
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=008'
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=245'
 
 # Auto suggestion history settings
 HISTSIZE=5000
