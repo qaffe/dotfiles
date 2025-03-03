@@ -5,13 +5,13 @@ These are my own personal dotfiles that I am using currently. They were original
 - This repo is WIP
 
 ## REQUIREMENTS
-Please ensure you have the following installed on your system prior to attempting to use these dotfiles:
+Please ensure you understand that the following are required for running these dots as-is prior to attempting to use them:
 - Wayland
 - Sway
 - Zsh
 - Git
 - Hack fonts
-- GNU Stow (Optional, but it's what I'm using to manage them)
+- vim-plug
 
 ## SCREENSHOTS
 WIP
