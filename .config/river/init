@@ -1,0 +1,41 @@
+# APPLICATION CONTROLS
+# TERMINAL
+riverctl map normal Super Return spawn kitty
+# DYNAMIC MENU
+riverctl map normal Super D spawn fuzzel
+
+
+# WINDOW CONTROLS
+# BASIC
+riverctl map normal Super Q close
+riverctl map normal Super F toggle-fullscreen
+riverctl map normal Super+Shift F toggle-float
+# FOCUS
+riverctl map normal Super H focus-view left
+riverctl map normal Super J focus-view down
+riverctl map normal Super K focus-view up
+riverctl map normal Super L focus-view right
+# SWAP
+riverctl map normal Super+Shift H swap left
+riverctl map normal Super+Shift J swap down
+riverctl map normal Super+Shift K swap up
+riverctl map normal Super+Shift L swap right
+# SNAP
+riverctl map normal Super+Alt H snap left
+riverctl map normal Super+Alt J snap down
+riverctl map normal Super+Alt K snap up
+riverctl map normal Super+Alt L snap right
+
+
+# CUSTOM KEYBINDS
+# SCREENSHOTS
+riverctl map normal Print spawn "grim $HOME/Pictures/Screenshots/$(date +'%s.png')"
+riverctl map normal Super Print spawn "grim -g "$slurp" $HOME/Pictures/$(date +'%s.png')"
+
+
+# RIVER SETTINGS
+riverctl map normal Super+Shift E exit
+riverctl default-layout rivertile
+rivertile -view-padding 6 -outer-padding 6 &
+
+riverctl spawn waybar
