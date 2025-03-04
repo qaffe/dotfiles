@@ -1,4 +1,4 @@
-# river my beloved x3
+# river my beloved :3
 
 # APPLICATIONS
 # TERMINAL
@@ -12,11 +12,22 @@ riverctl map normal Super D spawn fuzzel
 riverctl map normal Super Q close
 riverctl map normal Super F toggle-fullscreen
 riverctl map normal Super+Shift F toggle-float
+# RESIZE
+riverctl map normal Super+Alt+Shift H resize horizontal -100
+riverctl map normal Super+Alt+Shift J resize vertical 100
+riverctl map normal Super+Alt+Shift K resize vertical -100
+riverctl map normal Super+Alt+Shift L resize horizontal 100
 # FOCUS
 riverctl map normal Super H focus-view left
 riverctl map normal Super J focus-view down
 riverctl map normal Super K focus-view up
 riverctl map normal Super L focus-view right
+# FOCUS OUTPUT
+riverctl map normal Super Period focus-output next
+riverctl map normal Super Comma focus-output previous
+# SEND TO OUTPUT
+riverctl map normal Super+Shift Period send-to-output next
+riverctl map normal Super+Shift Comma send-to-output previous
 # SWAP
 riverctl map normal Super+Shift H swap left
 riverctl map normal Super+Shift J swap down
@@ -41,6 +52,16 @@ riverctl focus-follows-cursor normal
 riverctl hide-cursor when-typing enabled
 riverctl attach-mode bottom
 riverctl map normal Super+Shift E exit
+# TAGS
+for i in $(sex 1 9)
+do
+	tags=$((1 << ($i - 1)))
+	# FOCUS TAG
+	riverctl map normal Super $i set-focused-tags $tags
+	# TAG FOCUSED VIEW
+	riverctl map normal Super+Shift $i set-view-tags $tags
+done
+
 # LAYOUT
 riverctl default-layout bsp-layout
 river-bsp-layout --inner-gap 5 --outer-gap 10 --split-perc 0.5 &
