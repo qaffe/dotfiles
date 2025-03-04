@@ -1,4 +1,6 @@
-# APPLICATION CONTROLS
+# river my beloved x3
+
+# APPLICATIONS
 # TERMINAL
 riverctl map normal Super Return spawn kitty
 # DYNAMIC MENU
@@ -29,13 +31,21 @@ riverctl map normal Super+Alt L snap right
 
 # CUSTOM KEYBINDS
 # SCREENSHOTS
-riverctl map normal Print spawn "grim $HOME/Pictures/Screenshots/$(date +'%s.png')"
+riverctl map normal Print spawn "GRIM_DEFAULT_DIR=$HOME/Pictures/Screenshots/ grim | wl-copy --type 'image/png'"
 riverctl map normal Super Print spawn "grim -g "$slurp" $HOME/Pictures/$(date +'%s.png')"
 
 
 # RIVER SETTINGS
+# GENERAL
+riverctl focus-follows-cursor normal
+riverctl hide-cursor when-typing enabled
+riverctl attach-mode bottom
 riverctl map normal Super+Shift E exit
-riverctl default-layout rivertile
-rivertile -view-padding 6 -outer-padding 6 &
+# LAYOUT
+riverctl default-layout bsp-layout
+river-bsp-layout --inner-gap 5 --outer-gap 10 --split-perc 0.5 &
 
+
+# EXECUTE ON STARTUP
 riverctl spawn waybar
+riverctl spawn kanshi
