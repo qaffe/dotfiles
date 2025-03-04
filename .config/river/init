@@ -13,10 +13,10 @@ riverctl map normal Super Q close
 riverctl map normal Super F toggle-fullscreen
 riverctl map normal Super+Shift F toggle-float
 # RESIZE
-riverctl map normal Super+Alt+Shift H resize horizontal -100
-riverctl map normal Super+Alt+Shift J resize vertical 100
-riverctl map normal Super+Alt+Shift K resize vertical -100
-riverctl map normal Super+Alt+Shift L resize horizontal 100
+riverctl map normal Super+Alt+ H move left 100
+riverctl map normal Super+Alt+ J move down 100
+riverctl map normal Super+Alt+ K move up 100
+riverctl map normal Super+Alt+ L move right 100
 # FOCUS
 riverctl map normal Super H focus-view left
 riverctl map normal Super J focus-view down
@@ -33,11 +33,6 @@ riverctl map normal Super+Shift H swap left
 riverctl map normal Super+Shift J swap down
 riverctl map normal Super+Shift K swap up
 riverctl map normal Super+Shift L swap right
-# SNAP
-riverctl map normal Super+Alt H snap left
-riverctl map normal Super+Alt J snap down
-riverctl map normal Super+Alt K snap up
-riverctl map normal Super+Alt L snap right
 
 
 # CUSTOM KEYBINDS
@@ -53,7 +48,7 @@ riverctl hide-cursor when-typing enabled
 riverctl attach-mode bottom
 riverctl map normal Super+Shift E exit
 # TAGS
-for i in $(sex 1 9)
+for i in $(seq 1 9)
 do
 	tags=$((1 << ($i - 1)))
 	# FOCUS TAG
@@ -61,6 +56,7 @@ do
 	# TAG FOCUSED VIEW
 	riverctl map normal Super+Shift $i set-view-tags $tags
 done
+
 
 # LAYOUT
 riverctl default-layout bsp-layout
