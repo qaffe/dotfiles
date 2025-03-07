@@ -3,6 +3,7 @@ These are my own personal dotfiles that I am using currently. They were original
 
 ## THINGS TO KNOW
 - This repo is WIP
+- Put pacman.conf in /etc/pacman.conf (ignore if you're not using arch)
 
 ## REQUIREMENTS
 Please ensure you understand that the following are required for running these dots as-is prior to attempting to use them:
