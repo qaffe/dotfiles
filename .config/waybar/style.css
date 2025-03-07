@@ -1,0 +1,33 @@
+@define-color background #0b0a0d;
+@define-color foreground_black #161514;
+@define-color foreground_white #ffe6ff;
+@define-color button #0b0a0d;
+@define-color focused #ff9eff;
+@define-color occupied #e7d7e7;
+@define-color urgent #ff6e6e;
+
+* {
+	font-family: Hack;
+	font-size: 10pt;
+	border-radius: 0px;
+}
+
+window#waybar {
+	background: @background;
+	color: @foreground_white;
+}
+
+#tags button {
+	background: @button;
+	color: @foreground_white;
+}
+
+#tags button.occupied {
+	background: @occupied;
+	color: @foreground_white;
+}
+
+#tags button.focused {
+	background: @focused;
+	color: @foreground_black;
+}

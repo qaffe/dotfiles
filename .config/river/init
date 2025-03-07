@@ -47,10 +47,15 @@ riverctl focus-follows-cursor normal
 riverctl hide-cursor when-typing enabled
 riverctl attach-mode bottom
 riverctl map normal Super+Shift E exit
+# COLOUR
+riverctl background-color 0x0b0a0d
+riverctl border-color-focused 0xff9eff
+riverctl border-color-unfocused 0xffe6ff
 # TAGS
 for i in $(seq 1 9)
 do
 	tags=$((1 << ($i - 1)))
+
 	# FOCUS TAG
 	riverctl map normal Super $i set-focused-tags $tags
 	# TAG FOCUSED VIEW
@@ -66,3 +71,9 @@ river-bsp-layout --inner-gap 5 --outer-gap 10 --split-perc 0.5 &
 # EXECUTE ON STARTUP
 riverctl spawn waybar
 riverctl spawn kanshi
+
+
+# XDG STUFF
+systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
+dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=river
+systemctl --user restart xdg-desktop-portal
