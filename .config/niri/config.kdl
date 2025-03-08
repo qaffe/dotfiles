@@ -1,0 +1,110 @@
+// SPAWN AT STARTUP
+
+spawn-at-startup "xwayland-satellite"
+spawn-at-startup "kanshi"
+spawn-at-startup "waybar"
+
+// ENVIRONMENT
+
+environment {
+    DISPLAY ":0"
+}
+
+// LAYOUT
+
+layout {
+    gaps 16
+    center-focused-column "never"
+    preset-column-widths {
+        proportion 0.33333
+	proportion 0.5
+	proportion 0.66667
+    }
+    focus-ring {
+        width 4
+        active-gradient from="#80c8ff" to="#bbddff" angle=45 relative-to="workspace-view"
+	inactive-gradient from="#505050" to="#808080" angle=45 relative-to="workspace-view"
+    }
+    
+}
+
+// WINDOW RULES
+
+window-rule {
+    match app-id=r#"firefox$"# title="^Picture-in-Picture$"
+    open-floating true
+}
+
+// KEYBINDS
+
+binds {
+    // SHOW HOTKEY OVERLAY
+    Mod+Shift+Slash { show-hotkey-overlay; }
+    // QUIT NIRI
+    Mod+Shift+E { quit; }
+    // TERMINAL
+    Mod+Return	{ spawn "kitty"; }
+    // DYNAMIC MENU
+    Mod+D	{ spawn "fuzzel"; }
+    // CLOSE WINDOW
+    Mod+Q	{ close-window; }
+    
+    // GENERAL WINDOW/COLUMN MANAGEMENT
+    Mod+F	{ maximize-column; }
+    Mod+C	{ center-column;}
+    Mod+Shift+F	{ toggle-window-floating; }
+
+    // FOCUS
+    Mod+H	{ focus-column-left; }
+    Mod+J	{ focus-window-down; }
+    Mod+K	{ focus-window-up; }
+    Mod+L	{ focus-column-right;}
+
+    // MOVE WINDOW
+    Mod+Shift+H { move-column-left; }
+    Mod+Shift+J { move-window-down; }
+    Mod+Shift+K { move-window-up; }
+    Mod+Shift+L { move-column-right; }
+
+    // FOCUS MONITOR
+    Mod+Alt+H	{ focus-monitor-left;}
+    Mod+Alt+J	{ focus-monitor-down; }
+    Mod+Alt+K	{ focus-monitor-up; }
+    Mod+Alt+L	{ focus-monitor-right; }
+
+    // MOVE WINDOW TO MONITOR
+    Mod+Shift+Alt+H { move-window-to-monitor-left; }
+    Mod+Shift+Alt+J { move-window-to-monitor-down; }
+    Mod+Shift+Alt+K { move-window-to-monitor-up; }
+    Mod+Shift+Alt+L { move-window-to-monitor-right; }
+    
+    // CONSUME/EXPEL WINDOWS
+    Mod+Comma	{ consume-window-into-column; }
+    Mod+Period	{ expel-window-from-column; }
+
+    // WORKSPACES
+    Mod+1 { focus-workspace 1; }
+    Mod+2 { focus-workspace 2; }
+    Mod+3 { focus-workspace 3; }
+    Mod+4 { focus-workspace 4; }
+    Mod+5 { focus-workspace 5; }
+    Mod+6 { focus-workspace 6; }
+    Mod+7 { focus-workspace 7; }
+    Mod+8 { focus-workspace 8; }
+    Mod+9 { focus-workspace 9; }
+    Mod+Shift+1 { move-window-to-workspace 1; }
+    Mod+Shift+2 { move-window-to-workspace 2; }
+    Mod+Shift+3 { move-window-to-workspace 3; }
+    Mod+Shift+4 { move-window-to-workspace 4; }
+    Mod+Shift+5 { move-window-to-workspace 5; }
+    Mod+Shift+6 { move-window-to-workspace 6; }
+    Mod+Shift+7 { move-window-to-workspace 7; }
+    Mod+Shift+8 { move-window-to-workspace 8; }
+    Mod+Shift+9 { move-window-to-workspace 9; }
+
+    // SCREENSHOTS
+
+    Print { screenshot; }
+    Ctrl+Print { screenshot-screen; }
+    Alt+Print { screenshot-window; }
+}
