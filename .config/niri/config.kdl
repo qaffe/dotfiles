@@ -63,6 +63,7 @@ binds {
     Mod+C	{ center-column;}
     Mod+Alt+F	{ toggle-window-floating; }
     Mod+Shift+F { fullscreen-window; }
+    Mod+R	{ switch-preset-column-width; }
 
     // FOCUS
     Mod+H	{ focus-column-left; }
