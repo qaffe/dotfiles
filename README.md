@@ -8,7 +8,7 @@ These are my own personal dotfiles that I am using currently. They were original
 ## REQUIREMENTS
 Please ensure you understand that the following are required for running these dots as-is prior to attempting to use them:
 - Wayland
-- Sway
+- Niri
 - Zsh
 - Git
 - Hack fonts
