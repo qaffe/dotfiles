@@ -17,7 +17,6 @@ environment {
 
 cursor {
     hide-when-typing
-    hide-after-inactive-ms 1000
 }
 
 // LAYOUT
@@ -57,6 +56,8 @@ binds {
     Mod+D	{ spawn "fuzzel"; }
     // CLOSE WINDOW
     Mod+Q	{ close-window; }
+    // RESTART XWAYLAND SATELLITE
+    Mod+X { spawn "pkill" "xwayland-satellite" "&&" "xwayland-satellite"; }
     
     // GENERAL WINDOW/COLUMN MANAGEMENT
     Mod+F	{ maximize-column; }

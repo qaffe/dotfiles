@@ -3,18 +3,46 @@
 	"spacing": 4,
 	"reload_style_on_change": true,
 	"modules-left": [
-  	"river/tags"
+  	"niri/workspaces",
+	"network",
 	],
 	"modules-center": [
+	"niri/window",
 	],
 	"modules-right": [
 	"cpu",
+	"memory",
 	"custom/clock",
 	],
+	"niri/workspaces": {
+		"all-outputs": false,
+		"format": "{name} {icon}",
+		"format-icons": {
+			"active": "󰪥",
+			"default": "󰄰",
+		},
+	},
+	"network": {
+		"interval": 10,
+		"format-icons": "",
+		"format-ethernet": "󰁝 {bandwidthUpBits} | 󰁅 {bandwidthDownBits}",
+		"format-disconnected": "{icon} DISCONNECTED",
+	},
+	"niri/window": {
+		"max-length": 55,
+	},
 	"cpu": {
 		"interval": 10,
-		"format": "CPU: {usage}%",
-		"max-length": 10,
+		"format-icons": "",
+		"format": "{icon} CPU: {usage}%",
+		"max-length": 15,
+		"on-click": "kitty btop",
+	},
+	"memory": {
+		"interval": 10,
+		"format-icons": "",
+		"format": "{icon} RAM: {percentage}%",
+		"max-length": 15,
 		"on-click": "kitty btop",
 	},
 	"custom/clock": {
@@ -22,6 +50,6 @@
 		"interval": 60,
 		"tooltip": false,
 		"on-click": "month",
-		"on-click-right": "events"
+		"on-click-right": "events",
 	},
 }
