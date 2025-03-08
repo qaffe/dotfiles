@@ -61,7 +61,8 @@ binds {
     // GENERAL WINDOW/COLUMN MANAGEMENT
     Mod+F	{ maximize-column; }
     Mod+C	{ center-column;}
-    Mod+Shift+F	{ toggle-window-floating; }
+    Mod+Alt+F	{ toggle-window-floating; }
+    Mod+Shift+F { fullscreen-window; }
 
     // FOCUS
     Mod+H	{ focus-column-left; }
