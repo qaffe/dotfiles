@@ -4,10 +4,20 @@ spawn-at-startup "xwayland-satellite"
 spawn-at-startup "kanshi"
 spawn-at-startup "waybar"
 
+prefer-no-csd
+screenshot-path "~/Pictures/Screenshots/Screenshot-%Y-%m-%d %H-%M-%S.png"
+
 // ENVIRONMENT
 
 environment {
     DISPLAY ":0"
+}
+
+// CURSOR
+
+cursor {
+    hide-when-typing
+    hide-after-inactive-ms 1000
 }
 
 // LAYOUT
@@ -22,10 +32,9 @@ layout {
     }
     focus-ring {
         width 4
-        active-gradient from="#80c8ff" to="#bbddff" angle=45 relative-to="workspace-view"
-	inactive-gradient from="#505050" to="#808080" angle=45 relative-to="workspace-view"
+        active-gradient from="#ff9eff" to="#161514" angle=0
+	inactive-gradient from="#555555" to="#161514" angle=0
     }
-    
 }
 
 // WINDOW RULES
