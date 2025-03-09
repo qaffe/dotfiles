@@ -21,13 +21,13 @@ layout {
     center-focused-column "never"
     preset-column-widths {
         proportion 0.33333
-	proportion 0.5
-	proportion 0.66667
+        proportion 0.5
+        proportion 0.66667
     }
     focus-ring {
         width 4
-        active-gradient from="#ff9eff" to="#161514" angle=0
-	inactive-gradient from="#555555" to="#161514" angle=0
+        active-color "#ff9eff"
+        inactive-gradient from="#555555" to="#d8d8d0" angle=0
     }
 }
 
@@ -38,10 +38,15 @@ window-rule {
     open-floating true
 }
 
+window-rule {
+    match app-id=r#"^org\.keepassxc\.KeePassXC$"#
+    block-out-from "screencast"
+}
+
 // INPUT
 input {
     mouse {
-	accel-profile "flat"
+        accel-profile "flat"
         accel-speed 0.0
     }
 }
