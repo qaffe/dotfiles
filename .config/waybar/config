@@ -15,8 +15,9 @@
 	"custom/clock",
 	],
 	"niri/workspaces": {
+		"disable-click": true,
 		"all-outputs": false,
-		"format": "{name} {icon}",
+		"format": "{icon}",
 		"format-icons": {
 			"active": "󰪥",
 			"default": "󰄰",
