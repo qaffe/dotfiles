@@ -3,6 +3,7 @@
 spawn-at-startup "xwayland-satellite"
 spawn-at-startup "kanshi"
 spawn-at-startup "waybar"
+spawn-at-startup "mako"
 
 prefer-no-csd
 screenshot-path "~/Pictures/Screenshots/Screenshot-%Y-%m-%d %H-%M-%S.png"
@@ -11,12 +12,6 @@ screenshot-path "~/Pictures/Screenshots/Screenshot-%Y-%m-%d %H-%M-%S.png"
 
 environment {
     DISPLAY ":0"
-}
-
-// CURSOR
-
-cursor {
-    hide-when-typing
 }
 
 // LAYOUT
@@ -41,6 +36,14 @@ layout {
 window-rule {
     match app-id=r#"firefox$"# title="^Picture-in-Picture$"
     open-floating true
+}
+
+// INPUT
+input {
+    mouse {
+	accel-profile "flat"
+        accel-speed 0.0
+    }
 }
 
 // KEYBINDS
