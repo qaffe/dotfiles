@@ -61,7 +61,7 @@ binds {
     // TERMINAL
     Mod+Return	{ spawn "kitty"; }
     // DYNAMIC MENU
-    Mod+D	{ spawn "fuzzel"; }
+    Mod+D	{ spawn "fuzzel"; } 
     // CLOSE WINDOW
     Mod+Q	{ close-window; }
     // RESTART XWAYLAND SATELLITE
