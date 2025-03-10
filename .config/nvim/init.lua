@@ -19,7 +19,7 @@ vim.call('plug#end')
 local hipatterns = require('mini.hipatterns')
 hipatterns.setup({
 	highlighters = {
-		-- Highlight hex color strings (`#rrggbb`) using that color
+		-- Highlight hex colour strings (`#rrggbb`) using that colour
 		hex_color = hipatterns.gen_highlighter.hex_color(),
 	},
 })
