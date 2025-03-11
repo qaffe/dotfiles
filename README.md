@@ -5,6 +5,9 @@ These are my own personal dotfiles that I am using currently. They were original
 - This repo is WIP
 - Put pacman.conf in /etc/pacman.conf (ignore if you're not using arch)
 
+## SCREENSHOTS
+WIP
+
 ## REQUIREMENTS
 Please ensure you understand that the following are required for running these dots as-is prior to attempting to use them:
 - Wayland
@@ -19,6 +22,3 @@ Please ensure you understand that the following are required for running these d
 - Fuzzel
 - GNU Stow (to manage the dotfiles)
 - Git (to pull the dotfiles)
-
-## SCREENSHOTS
-WIP
