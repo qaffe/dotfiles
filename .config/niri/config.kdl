@@ -65,7 +65,8 @@ binds {
     // CLOSE WINDOW
     Mod+Q	{ close-window; }
     // RESTART XWAYLAND SATELLITE
-    Mod+X { spawn "pkill" "xwayland-satellite" "&&" "xwayland-satellite"; }
+    Mod+X { spawn "pkill" "-f" "xwayland-satellite";}
+    Mod+Shift+X { spawn "xwayland-satellite"; }
     
     // GENERAL WINDOW/COLUMN MANAGEMENT
     Mod+F	{ maximize-column; }
