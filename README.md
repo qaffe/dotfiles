@@ -20,5 +20,6 @@ Please ensure you understand that the following are required for running these d
 - Starship
 - Waybar
 - Fuzzel
+- Phinger Cursors
 - GNU Stow (to manage the dotfiles)
 - Git (to pull the dotfiles)
