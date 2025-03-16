@@ -14,6 +14,11 @@ environment {
     DISPLAY ":0"
 }
 
+cursor {
+    xcursor-size 32
+    xcursor-theme "phinger-cursors-light"
+}
+
 // LAYOUT
 
 layout {
