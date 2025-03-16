@@ -21,5 +21,6 @@ Please ensure you understand that the following are required for running these d
 - Waybar
 - Fuzzel
 - Phinger Cursors
+- xdg-desktop-portal-termfilechooser
 - GNU Stow (to manage the dotfiles)
 - Git (to pull the dotfiles)
