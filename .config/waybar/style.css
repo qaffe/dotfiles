@@ -15,7 +15,7 @@ window#waybar {
 }
 
 #workspaces button {
-	padding: 0px 3px;
+	padding: 0px 0px;
 	border-bottom: 4px;
 	border-style: solid;
 	color: #161514;
@@ -30,13 +30,20 @@ window#waybar {
 	margin-top: 0px;
 }
 
-#workspaces button.active {
+/* UNCOMMENT IF USING NIRI */
+/* #workspaces button.active {
 	border-color: #555555;
-}
+} */
 
-#workspaces button.focused {
+/* COMMENT IF USING NIRI */
+#workspaces button.active {
 	border-color: #ff9eff;
 }
+
+/* UNCOMMENT IF USING NIRI */
+/* #workspaces button.focused {
+	border-color: #ff9eff;
+} */
 
 #network.disconnected {
 	border-color: #ff6e6e;

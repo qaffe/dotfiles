@@ -3,10 +3,12 @@
 	"spacing": 4,
 	"reload_style_on_change": true,
 	"modules-left": [
+	"hyprland/workspaces",
   	"niri/workspaces",
 	"network",
 	],
 	"modules-center": [
+	"hyprland/window",
 	"niri/window",
 	],
 	"modules-right": [
@@ -14,6 +16,16 @@
 	"memory",
 	"custom/clock",
 	],
+	"hyprland/window": {
+		"seperate-outputs": true
+	},
+	"hyprland/workspaces": {
+		"format": "{icon}",
+		"format-icons": {
+			"active": "󰪥",
+			"default": "󰄰",
+		},
+	},
 	"niri/workspaces": {
 		"disable-click": true,
 		"all-outputs": false,
