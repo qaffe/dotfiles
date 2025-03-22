@@ -18,6 +18,9 @@ function y() {
 	rm -f -- "$tmp"
 }
 
+# Cargo path
+export PATH=/home/qaffe/.cargo/bin:$PATH
+
 # Start starship
 exprt STARSHIP_CONFIG=~/.config/starship/starship.toml
 eval "$(starship init bash)"
