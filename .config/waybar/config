@@ -3,11 +3,13 @@
 	"spacing": 4,
 	"reload_style_on_change": true,
 	"modules-left": [
+	"river/tags",
 	"hyprland/workspaces",
   	"niri/workspaces",
 	"network",
 	],
 	"modules-center": [
+	"river/window",
 	"hyprland/window",
 	"niri/window",
 	],
@@ -16,8 +18,14 @@
 	"memory",
 	"custom/clock",
 	],
-	"hyprland/window": {
-		"seperate-outputs": true
+	"river/tags": {
+		"num-tags": 3,
+		"disable-tags": true,
+		"tag-labels":[
+			"1",
+			"2",
+			"3",
+		],
 	},
 	"hyprland/workspaces": {
 		"format": "{icon}",
@@ -40,6 +48,12 @@
 		"format-icons": "",
 		"format-ethernet": "󰁝 {bandwidthUpBits} | 󰁅 {bandwidthDownBits}",
 		"format-disconnected": "{icon} DISCONNECTED",
+	},
+	"river/window": {
+		"max-length": 55,
+	},
+	"hyprland/window": {
+		"seperate-outputs": true
 	},
 	"niri/window": {
 		"max-length": 55,

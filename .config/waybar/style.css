@@ -14,6 +14,33 @@ window#waybar {
 	background: #d8d8d0;
 }
 
+#tags button {
+	padding: 0px 0px;
+	border-bottom: 4px;
+	border-style: solid;
+	color: #161514;
+	border-color: #161514;
+}
+
+#tags button:hover {
+	background: none;
+	box-shadow: none;
+	text-shadow: none;
+}
+
+#tags button.occupied {
+	border-color: #555555;
+	color: #ff9eff;
+}
+
+#tags button.focused {
+	border-color: #ff9eff;
+}
+
+#tags button.urgent {
+	border-color: #ff6e6e;
+}
+
 #workspaces button {
 	padding: 0px 0px;
 	border-bottom: 4px;
@@ -23,11 +50,9 @@ window#waybar {
 }
 
 #workspaces button:hover {
-	background: transparent;
-	box-shadow: inherit;
-	text-shadow: inherit;
-	border-top: 0px;
-	margin-top: 0px;
+	background: none;
+	box-shadow: none;
+	text-shadow: none;
 }
 
 /* UNCOMMENT IF USING NIRI */
