@@ -21,6 +21,9 @@ Please ensure you understand that the following are required for running these d
 - Waybar
 - Fuzzel
 - Phinger Cursors
+- grim + slurp (if using river)
+- wl-clipboard (if using river)
+- hyprshot (if using hyprland)
 - xdg-desktop-portal-termfilechooser
 - GNU Stow (to manage the dotfiles)
 - Git (to pull the dotfiles)
