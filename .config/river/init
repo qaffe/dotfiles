@@ -37,8 +37,8 @@ riverctl map normal Super+Shift L swap right
 
 # CUSTOM KEYBINDS
 # SCREENSHOTS
-#riverctl map normal Print spawn "GRIM_DEFAULT_DIR=$HOME/Pictures/Screenshots/ grim | wl-copy --type 'image/png'"
-#riverctl map normal Super Print spawn "grim -g "$slurp" $HOME/Pictures/$(date +'%s.png')"
+riverctl map normal None Print spawn 'IMG=~/Pictures/Screenshots/screenshot_$(date | sed "s/\s/-/g" | sed "s/--/-/g").png&&grim -g "$(slurp)" $IMG && cat $IMG | wl-copy' 
+riverctl map normal Super Print spawn 'IMG=~/Pictures/Screenshots/screenshot_$(date | sed "s/\s/-/g" | sed "s/--/-/g").png&&grim $IMG && cat $IMG | wl-copy'
 
 
 # RIVER SETTINGS
