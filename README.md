@@ -11,7 +11,7 @@ WIP
 ## REQUIREMENTS
 Please ensure you understand that the following are required for running these dots as-is prior to attempting to use them:
 - Wayland
-- Niri
+- River (or niri, or hyprland, use whatever)
 - Bash + Zsh (I use both interchangeably)
 - Hack fonts
 - Kitty terminal
