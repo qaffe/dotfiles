@@ -66,6 +66,12 @@ done
 riverctl default-layout rivertile
 rivertile -view-padding 6 -outer-padding 6 &
 
+# RULES
+riverctl rule-add -title "Special Offers" float # for steam
+riverctl rule-add -title "Friends List" float   # for steam
+riverctl rule-add -title "Steam Settings" float # for steam
+riverctl rule-add -title 'Picture-in-Picture' float
+riverctl rule-add -title 'Picture-in-Picture' float
 
 # EXECUTE ON STARTUP
 riverctl spawn waybar
