@@ -43,6 +43,7 @@ riverctl map normal Super Print spawn 'IMG=~/Pictures/Screenshots/screenshot_$(d
 
 # RIVER SETTINGS
 # GENERAL
+riverctl xcursor-theme 'phinger-cursors-light' 32
 riverctl focus-follows-cursor normal
 riverctl hide-cursor when-typing disabled
 riverctl attach-mode bottom
@@ -67,8 +68,8 @@ riverctl default-layout rivertile
 rivertile -view-padding 6 -outer-padding 6 &
 
 # RULES
-riverctl rule-add -title "Special Offers" float # for steam
-riverctl rule-add -title "Friends List" float   # for steam
+riverctl rule-add -title 'Special Offers' float # for steam
+riverctl rule-add -title 'Friends List' float   # for steam
 riverctl rule-add -title "Steam Settings" float # for steam
 riverctl rule-add -title 'Picture-in-Picture' float
 riverctl rule-add -title 'Picture-in-Picture' float
