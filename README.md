@@ -20,6 +20,7 @@ Please ensure you understand that the following are required for running these d
 - Starship
 - Waybar
 - Fuzzel
+- Vesktop
 - Phinger Cursors
 - grim + slurp (if using river)
 - wl-clipboard (if using river)
