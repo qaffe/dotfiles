@@ -9,8 +9,10 @@ local Plug = vim.fn['plug#']
 vim.call('plug#begin')
 
 Plug('echasnovski/mini.nvim') -- mini.nvim
-Plug('echasnovski/mini.hipatterns') -- Highlight Patterns
-Plug('lukas-reineke/indent-blankline.nvim')
+Plug('nvimdev/dashboard-nvim') -- dashboard
+Plug('echasnovski/mini.hipatterns') -- mini highlight patterns
+Plug('echasnovski/mini.icons') -- mini icons
+Plug('lukas-reineke/indent-blankline.nvim') -- indent line
 
 vim.call('plug#end')
 
@@ -23,4 +25,11 @@ hipatterns.setup({
 		hex_color = hipatterns.gen_highlighter.hex_color(),
 	},
 })
-require("ibl").setup()
+local ibl = require('ibl')
+ibl.setup({
+	exclude = {filetypes = {"dashboard"}}
+})
+local dashboard = require('dashboard')
+dashboard.setup({
+	-- config here when i feel like it
+})
