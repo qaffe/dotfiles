@@ -301,6 +301,14 @@ local theme = lush(function(injected_functions)
     -- sym"@preproc"           { }, -- PreProc
     -- sym"@debug"             { }, -- Debug
     -- sym"@tag"               { }, -- Tag
+    
+    -- Dashboard highlight groups
+
+    DashboardHeader	       { fg = offwhite}, 	-- Dashboard Header
+    DashboardCenter	       { fg = offwhite }, 	-- Dashboard Center
+    DashboardIcon	       { fg = pink },		-- Dashboard Cyan
+    DashboardKey	       { fg = green }, 		-- Dashboard Key
+    DashboardFooter	       { fg = offwhite }, 	-- Dashboard Footer
 }
 end)
 

@@ -69,4 +69,10 @@ export PATH=/home/qaffe/.cargo/bin:$PATH
 export STARSHIP_CONFIG=~/.config/starship/starship.toml
 eval "$(starship init zsh)"
 
-echo "put something here"
+# Spacing
+echo ""
+echo ""
+# Startup text
+result1=$(figlet -f ANSIShadow "hello")
+result2=$(figlet -f ANSIShadow "qaffe :3")
+echo -e "\033[38;2;255;158;255;m$result1\n\033[38;2;231;215;231;m$result2"
