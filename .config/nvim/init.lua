@@ -1,46 +1,86 @@
-vim.g.nvim_start_time = vim.loop.hrtime() -- get startup time
+--██╗███╗   ██╗██╗████████╗██╗     ██╗   ██╗ █████╗ 
+--██║████╗  ██║██║╚══██╔══╝██║     ██║   ██║██╔══██╗
+--██║██╔██╗ ██║██║   ██║   ██║     ██║   ██║███████║
+--██║██║╚██╗██║██║   ██║   ██║     ██║   ██║██╔══██║
+--██║██║ ╚████║██║   ██║██╗███████╗╚██████╔╝██║  ██║
+--╚═╝╚═╝  ╚═══╝╚═╝   ╚═╝╚═╝╚══════╝ ╚═════╝ ╚═╝  ╚═╝
 
--- NVIM OPTIONS
+-- general settings
+vim.g.nvim_start_time = vim.loop.hrtime() -- get startup time
 vim.opt.number = true
 vim.opt.relativenumber = true
+vim.opt.clipboard = "unnamedplus"
 
--- INITIALIZE PLUGINS
-local vim = vim
-local Plug = vim.fn['plug#']
+-- keybinds
+vim.keymap.set("ca", "db", "Dashboard") -- easier to access dashboard
 
-vim.call('plug#begin')
+--██████╗ ██╗     ██╗   ██╗ ██████╗ ██╗███╗   ██╗    ██╗███╗   ██╗██╗████████╗
+--██╔══██╗██║     ██║   ██║██╔════╝ ██║████╗  ██║    ██║████╗  ██║██║╚══██╔══╝
+--██████╔╝██║     ██║   ██║██║  ███╗██║██╔██╗ ██║    ██║██╔██╗ ██║██║   ██║   
+--██╔═══╝ ██║     ██║   ██║██║   ██║██║██║╚██╗██║    ██║██║╚██╗██║██║   ██║   
+--██║     ███████╗╚██████╔╝╚██████╔╝██║██║ ╚████║    ██║██║ ╚████║██║   ██║   
+--╚═╝     ╚══════╝ ╚═════╝  ╚═════╝ ╚═╝╚═╝  ╚═══╝    ╚═╝╚═╝  ╚═══╝╚═╝   ╚═╝   
 
-Plug('echasnovski/mini.nvim') -- mini.nvim
-Plug('nvim-lua/plenary.nvim') -- plenary.nvim
-Plug('nvim-telescope/telescope.nvim') -- telescope
-Plug('nvimdev/dashboard-nvim') -- dashboard
-Plug('echasnovski/mini.hipatterns') -- mini highlight patterns
-Plug('echasnovski/mini.icons') -- mini icons
-Plug('lukas-reineke/indent-blankline.nvim') -- indent line
+local Plug = vim.fn["plug#"]
 
-vim.call('plug#end')
+vim.call("plug#begin")
 
--- PLUGIN CONFIG
-local hipatterns = require('mini.hipatterns') -- mini highlight patterns
+Plug("echasnovski/mini.nvim") 				-- mini.nvim
+Plug("tree-sitter/tree-sitter")				-- tree-sitter
+Plug("nvim-lua/plenary.nvim") 				-- plenary.nvim
+Plug("nvim-telescope/telescope.nvim") 			-- telescope
+Plug("olimorris/persisted.nvim")	 		-- persisted
+Plug("nvimdev/dashboard-nvim") 				-- dashboard
+Plug("echasnovski/mini.hipatterns") 			-- mini highlight patterns
+Plug("echasnovski/mini.icons") 				-- mini icons
+Plug("mikavilpas/yazi.nvim")				-- yazi.nvim
+Plug("rktjmp/lush.nvim")				-- lush
+Plug("lukas-reineke/indent-blankline.nvim")		-- indent line
+
+Plug("/home/qaffe/.config/nvim/qaffe_colours")		-- lush colour scheme
+
+vim.call("plug#end")
+
+--██████╗ ██╗     ██╗   ██╗ ██████╗ ██╗███╗   ██╗     ██████╗ ██████╗ ███╗   ██╗███████╗██╗ ██████╗ 
+--██╔══██╗██║     ██║   ██║██╔════╝ ██║████╗  ██║    ██╔════╝██╔═══██╗████╗  ██║██╔════╝██║██╔════╝ 
+--██████╔╝██║     ██║   ██║██║  ███╗██║██╔██╗ ██║    ██║     ██║   ██║██╔██╗ ██║█████╗  ██║██║  ███╗
+--██╔═══╝ ██║     ██║   ██║██║   ██║██║██║╚██╗██║    ██║     ██║   ██║██║╚██╗██║██╔══╝  ██║██║   ██║
+--██║     ███████╗╚██████╔╝╚██████╔╝██║██║ ╚████║    ╚██████╗╚██████╔╝██║ ╚████║██║     ██║╚██████╔╝
+--╚═╝     ╚══════╝ ╚═════╝  ╚═════╝ ╚═╝╚═╝  ╚═══╝     ╚═════╝ ╚═════╝ ╚═╝  ╚═══╝╚═╝     ╚═╝ ╚═════╝ 
+
+local hipatterns = require("mini.hipatterns") 					-- mini highlight patterns
+
 hipatterns.setup({
 	highlighters = {
-		-- highlight hex colour strings (`#rrggbb`) using that colour
-		hex_color = hipatterns.gen_highlighter.hex_color(),
+		-- add TODO, FIX, etc here later
 	},
-})
+}) 
 
-local ibl = require('ibl') -- indent line
+local ibl = require("ibl") 							-- indent line
 ibl.setup({
 	exclude = {filetypes = {"dashboard"}}
 })
 
-local dashboard = require('dashboard') -- dashboard
+local telescope = require("telescope") 						-- telescope
+telescope.setup({
+	defaults = {
+		-- defaults here
+	},
+	extensions = {
+		persisted = {
+			layout_config = {width = 0.55, height = 0.55}
+		},
+	},
+})
+telescope.load_extension("persisted")
+
+
+local dashboard = require("dashboard") 						-- dashboard
 local plugin_count = #(vim.fn.keys(vim.g.plugs or {})) -- get plugin count
 dashboard.setup({
-	theme = 'doom',
+	theme = "doom",
 	config = {
-		disable_move = 'true',
-		shortcut_type = 'number',
+		disable_move = "true",
 		header = { -- tomoko my beloved 
 			"⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⣀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀",
 			"⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣠⣴⣶⣾⣿⣿⣿⣿⣿⣿⣖⣾⣦⣠⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀",
@@ -91,7 +131,7 @@ dashboard.setup({
 			keymap = "",
 			key = "b",
 			icon = "  ",
-			action = "Telescope file_browser",
+			action = "Yazi cwd",
 		    },
 
 		    {
@@ -103,11 +143,11 @@ dashboard.setup({
 		    },
 
 		    {
-			desc = "Load Last Session",
+			desc = "Load Sessions",
 			keymap = "",
-			key = "L",
+			key = "l",
 			icon = "  ",
-			action = "SessionLoad",
+			action = "Telescope persisted",
 		    },
 
 		    {
@@ -127,11 +167,11 @@ dashboard.setup({
 		    },
 
 		    {
-			desc = "Config",
+			desc = "System Config",
 			keymap = "",
 			key = "c",
 			icon = "  ",
-			action = "Telescope find_files cwd=~/.config/nvim",
+			action = "Telescope find_files hidden=true search_dirs=~/Dotfiles/",
 		    },
 		    {
 			desc = "Exit",
@@ -142,11 +182,13 @@ dashboard.setup({
 		    },
 		},
 		footer = function()
-			local elapsed = (vim.loop.hrtime() - vim.g.nvim_start_time) / 1e6
+			local time_elapsed = (vim.loop.hrtime() - vim.g.nvim_start_time) / 1e6
 			return {
-				'',
-				('[ Startup time: %.2f ms ]'):format(elapsed),
+				"",
+				("[ Startup time: %.2f ms ]"):format(time_elapsed),
 			}
 		end,
 	},
 })
+
+vim.cmd("colorscheme qaffe_colours") -- set colour scheme
