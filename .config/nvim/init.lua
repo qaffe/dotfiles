@@ -6,13 +6,43 @@
 --╚═╝╚═╝  ╚═══╝╚═╝   ╚═╝╚═╝╚══════╝ ╚═════╝ ╚═╝  ╚═╝
 
 -- general settings
-vim.g.nvim_start_time = vim.loop.hrtime() -- get startup time
+vim.g.start_time = vim.loop.hrtime()
 vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.clipboard = "unnamedplus"
 
 -- keybinds
 vim.keymap.set("ca", "db", "Dashboard") -- easier to access dashboard
+vim.keymap.set("ca", "ex", "Yazi")	-- easier to access yazi
+
+-- hardmode
+local hardmode = true
+if hardmode then
+    -- show an error message if a disabled key is pressed
+    local msg = [[<cmd>echohl Error | echo "KEY DISABLED" | echohl None<CR>]]
+
+    -- disable arrow keys in insert mode with a styled message
+    vim.api.nvim_set_keymap('i', '<Up>', '<C-o>' .. msg, { noremap = true, silent = false })
+    vim.api.nvim_set_keymap('i', '<Down>', '<C-o>' .. msg, { noremap = true, silent = false })
+    vim.api.nvim_set_keymap('i', '<Left>', '<C-o>' .. msg, { noremap = true, silent = false })
+    vim.api.nvim_set_keymap('i', '<Right>', '<C-o>' .. msg, { noremap = true, silent = false })
+    vim.api.nvim_set_keymap('i', '<Del>', '<C-o>' .. msg, { noremap = true, silent = false })
+    vim.api.nvim_set_keymap('i', '<BS>', '<C-o>' .. msg, { noremap = true, silent = false })
+
+    -- disable arrow keys in normal mode with a styled message
+    vim.api.nvim_set_keymap('n', '<Up>', msg, { noremap = true, silent = false })
+    vim.api.nvim_set_keymap('n', '<Down>', msg, { noremap = true, silent = false })
+    vim.api.nvim_set_keymap('n', '<Left>', msg, { noremap = true, silent = false })
+    vim.api.nvim_set_keymap('n', '<Right>', msg, { noremap = true, silent = false })
+    vim.api.nvim_set_keymap('n', '<BS>', msg, { noremap = true, silent = false })
+end
+
+vim.api.nvim_create_autocmd("VimEnter", { -- runs after the editor is ready
+  callback = function()
+    local startup_time_elapsed = (vim.loop.hrtime() - vim.g.start_time) / 1e6 -- calculate time elapsed between current time and start time
+    vim.g.startup_time_string = ("[ Startup time: %.2f ms ]"):format(startup_time_elapsed) -- store startup time in string
+  end,
+})
 
 --██████╗ ██╗     ██╗   ██╗ ██████╗ ██╗███╗   ██╗    ██╗███╗   ██╗██╗████████╗
 --██╔══██╗██║     ██║   ██║██╔════╝ ██║████╗  ██║    ██║████╗  ██║██║╚══██╔══╝
@@ -177,10 +207,9 @@ dashboard.setup({
 			},
 		},
 		footer = function()
-			local time_elapsed = (vim.loop.hrtime() - vim.g.nvim_start_time) / 1e6
 			return {
 				"",
-				("[ Startup time: %.2f ms ]"):format(time_elapsed),
+				vim.g.startup_time_string,
 			}
 		end,
 	},
