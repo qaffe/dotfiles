@@ -3,28 +3,15 @@ These are my own personal dotfiles that I am using currently. They were original
 
 ## THINGS TO KNOW
 - This repo is WIP
-- Put pacman.conf in /etc/pacman.conf (ignore if you're not using arch)
 
 ## SCREENSHOTS
 WIP
 
-## REQUIREMENTS
-Please ensure you understand that the following are required for running these dots as-is prior to attempting to use them:
-- Wayland
-- River (or niri, or hyprland, use whatever)
-- Bash + Zsh (I use both interchangeably)
-- Hack fonts
-- Kitty terminal
-- Neovim
-- vim-plug
-- Starship
-- Waybar
-- Fuzzel
-- Vesktop
-- Phinger Cursors
-- grim + slurp (if using river)
-- wl-clipboard (if using river)
-- hyprshot (if using hyprland)
-- xdg-desktop-portal-termfilechooser
-- GNU Stow (to manage the dotfiles)
-- Git (to pull the dotfiles)
+## INSTRUCTIONS
+The following are instructions for using these dotfiles on a fresh install of Arch.
+1. ```sudo pacman -S git```
+2. ```git clone https://github.com/qaffe/dotfiles.git```
+3. ```cd dotfiles```
+4. ```sudo bash post-install.sh``` - this script will only fully work if your username is qaffe and i don't feel like remaking that part of it
+5. ```stow .```
+6. will add more instructions later
