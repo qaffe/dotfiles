@@ -32,7 +32,7 @@ install_packages() {
         	base base-devel linux linux-firmware amd-ucode efibootmgr grub man-db	
 	log "Installing drivers and graphics stack..."
 	pacman -S --noconfirm --needed \
-		mesa vulkan-radeon xf86-video-amdgpu xf86-video-ati xf86-video-nouveau xf86-video-vmware 
+		mesa vulkan-radeon xf86-video-amdgpu xf86-video-vmware 
 	log "Installing networking tools..."
 	pacman -S --noconfirm --needed \
 		wireless_tools iwd wpa_supplicant openssh ufw syncthing
@@ -45,23 +45,19 @@ install_packages() {
 	pacman -S --noconfirm --needed \
         	firefox kitty keepassxc libreoffice-still obs-studio godot blender steam wine \
         	torbrowser-launcher openrgb gamescope
-
 	log "Installing audio stack (PipeWire)..."
 	pacman -S --noconfirm --needed \
         	pipewire pipewire-alsa pipewire-jack pipewire-pulse \
         	wireplumber pavucontrol gst-plugin-pipewire libpulse
-
-	echo "Installing shell enhancements and fonts..."
+	log "Installing shell enhancements and fonts..."
 	pacman -S --noconfirm --needed \
         	noto-fonts noto-fonts-cjk ttf-hack \
         	starship figlet neofetch hyfetch zsh
-
-	echo "Installing CLI utilities and development tools..."
+	log "Installing CLI utilities and development tools..."
 	pacman -S --noconfirm --needed \
 		brightnessctl corectrl smartmontools stow wget rust jq yazi \
 		btop htop hyprpolkitagent vim neovim
-
-	echo "Installing miscellaneous tools..."
+	log "Installing miscellaneous tools..."
 	pacman -S --noconfirm --needed \
 		7zip kanshi mangohud gnome-keyring
 }
