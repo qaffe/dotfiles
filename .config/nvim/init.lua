@@ -22,26 +22,23 @@ if hardmode then
     local msg = [[<cmd>echohl Error | echo "KEY DISABLED" | echohl None<CR>]]
 
     -- disable arrow keys in insert mode with a styled message
-    vim.api.nvim_set_keymap('i', '<Up>', '<C-o>' .. msg, { noremap = true, silent = false })
-    vim.api.nvim_set_keymap('i', '<Down>', '<C-o>' .. msg, { noremap = true, silent = false })
-    vim.api.nvim_set_keymap('i', '<Left>', '<C-o>' .. msg, { noremap = true, silent = false })
-    vim.api.nvim_set_keymap('i', '<Right>', '<C-o>' .. msg, { noremap = true, silent = false })
-    vim.api.nvim_set_keymap('i', '<Del>', '<C-o>' .. msg, { noremap = true, silent = false })
-    vim.api.nvim_set_keymap('i', '<BS>', '<C-o>' .. msg, { noremap = true, silent = false })
+    vim.api.nvim_set_keymap("i", "<Up>", "<C-o>" .. msg, { noremap = true, silent = false })
+    vim.api.nvim_set_keymap("i", "<Down>", "<C-o>" .. msg, { noremap = true, silent = false })
+    vim.api.nvim_set_keymap("i", "<Left>", "<C-o>" .. msg, { noremap = true, silent = false })
+    vim.api.nvim_set_keymap("i", "<Right>", "<C-o>" .. msg, { noremap = true, silent = false })
 
     -- disable arrow keys in normal mode with a styled message
-    vim.api.nvim_set_keymap('n', '<Up>', msg, { noremap = true, silent = false })
-    vim.api.nvim_set_keymap('n', '<Down>', msg, { noremap = true, silent = false })
-    vim.api.nvim_set_keymap('n', '<Left>', msg, { noremap = true, silent = false })
-    vim.api.nvim_set_keymap('n', '<Right>', msg, { noremap = true, silent = false })
-    vim.api.nvim_set_keymap('n', '<BS>', msg, { noremap = true, silent = false })
+    vim.api.nvim_set_keymap("n", "<Up>", msg, { noremap = true, silent = false })
+    vim.api.nvim_set_keymap("n", "<Down>", msg, { noremap = true, silent = false })
+    vim.api.nvim_set_keymap("n", "<Left>", msg, { noremap = true, silent = false })
+    vim.api.nvim_set_keymap("n", "<Right>", msg, { noremap = true, silent = false })
 end
 
 vim.api.nvim_create_autocmd("VimEnter", { -- runs after the editor is ready
-  callback = function()
-    local startup_time_elapsed = (vim.loop.hrtime() - vim.g.start_time) / 1e6 -- calculate time elapsed between current time and start time
-    vim.g.startup_time_string = ("[ Startup time: %.2f ms ]"):format(startup_time_elapsed) -- store startup time in string
-  end,
+	callback = function()
+		local startup_time_elapsed = (vim.loop.hrtime() - vim.g.start_time) / 1e6 -- calculate time elapsed between current time and start time
+		vim.g.startup_time_string = ("[ Startup time: %.2f ms ]"):format(startup_time_elapsed) -- store startup time in string
+	end,
 })
 
 --██████╗ ██╗     ██╗   ██╗ ██████╗ ██╗███╗   ██╗    ██╗███╗   ██╗██╗████████╗
