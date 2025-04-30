@@ -19,12 +19,14 @@
 	"custom/clock",
 	],
 	"river/tags": {
-		"num-tags": 3,
+		"num-tags": 5,
 		"disable-tags": true,
 		"tag-labels":[
 			"1",
 			"2",
 			"3",
+			"4",
+			"5",
 		],
 	},
 	"hyprland/workspaces": {

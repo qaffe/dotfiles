@@ -56,7 +56,7 @@ install_packages() {
 	log "Installing CLI utilities and development tools..."
 	pacman -S --noconfirm --needed \
 		brightnessctl corectrl smartmontools stow wget rust jq yazi \
-		btop htop hyprpolkitagent vim neovim
+		btop htop hyprpolkitagent vim neovim ripgrep
 	log "Installing miscellaneous tools..."
 	pacman -S --noconfirm --needed \
 		7zip kanshi mangohud gnome-keyring
@@ -81,18 +81,6 @@ install_aur_packages() {
 	return 0	
 }
 
-# install vim plugin manager
-install_vim_plug() {
-	if [[ ! -f "/home/qaffe/.local/share/nvim/site/autoload/plug.vim" ]]; then
-		log "Installing vim-plug (Neovim plugin manager)..."
-		sh -c 'curl -fLo "/home/qaffe/.local/share/nvim/site/autoload/plug.vim" --create-dirs \
-			https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
-        	log "vim-plug installed for Neovim."
-	else
-		warn "vim-plug is already installed for Neovim."
-	fi
-}
-
 # other minor tweaks
 tweak_system() {
 	return 0
@@ -102,7 +90,6 @@ main() {
 	install_packages
 	install_aur_helper
 	install_aur_packages
-	install_vim_plug
 	tweak_system
 	
 	log "Setup complete :3"

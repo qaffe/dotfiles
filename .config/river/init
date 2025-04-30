@@ -53,7 +53,7 @@ riverctl background-color 0x0b0a0d
 riverctl border-color-focused 0xff9eff
 riverctl border-color-unfocused 0xffe6ff
 # TAGS
-for i in $(seq 1 3)
+for i in $(seq 1 5)
 do
 	tags=$((1 << ($i - 1)))
 	# FOCUS TAG
