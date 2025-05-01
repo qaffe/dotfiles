@@ -23,11 +23,11 @@ riverctl map normal Super J focus-view down
 riverctl map normal Super K focus-view up
 riverctl map normal Super L focus-view right
 # FOCUS OUTPUT
-riverctl map normal Super Period focus-output next
-riverctl map normal Super Comma focus-output previous
+riverctl map normal Super Period focus-output previous
+riverctl map normal Super Comma focus-output next
 # SEND TO OUTPUT
-riverctl map normal Super+Shift Period send-to-output next
-riverctl map normal Super+Shift Comma send-to-output previous
+riverctl map normal Super+Shift Period send-to-output previous
+riverctl map normal Super+Shift Comma send-to-output next
 # SWAP
 riverctl map normal Super+Shift H swap left
 riverctl map normal Super+Shift J swap down
