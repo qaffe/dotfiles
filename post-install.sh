@@ -38,7 +38,7 @@ install_packages() {
 		wireless_tools iwd wpa_supplicant openssh ufw syncthing
 	log "Installing Wayland environment and core components..."
 	pacman -S --noconfirm --needed \
-        	river waybar fuzzel grim slurp wl-clipboard \
+        	river waybar swaybg fuzzel grim slurp wl-clipboard \
         	xdg-desktop-portal xdg-desktop-portal-gnome xdg-desktop-portal-gtk xdg-desktop-portal-wlr \
         	xdg-user-dirs xdg-utils
 	log "Installing user applications..."
