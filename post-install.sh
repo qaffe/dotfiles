@@ -59,7 +59,7 @@ install_packages() {
 		btop htop hyprpolkitagent vim neovim ripgrep
 	log "Installing miscellaneous tools..."
 	pacman -S --noconfirm --needed \
-		7zip kanshi mangohud gnome-keyring
+		unzip 7zip kanshi mangohud gnome-keyring
 }
 
 # install aur helper
