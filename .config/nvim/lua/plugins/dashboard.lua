@@ -103,7 +103,7 @@ return {
 							keymap = "",
 							key = "c",
 							icon = "  ",
-							action = "Telescope find_files hidden=true search_dirs=~/Dotfiles/",
+							action = "Telescope find_files hidden=true search_dirs=~/dotfiles/",
 						},
 
 						{
