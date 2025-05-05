@@ -1,4 +1,5 @@
 #!/bin/bash
+
 set -e
 
 # fancy colours for readability
@@ -27,6 +28,8 @@ fi
 
 # install non-aur packages
 install_packages() {
+	log "Syncing pacman databases..."
+	pacman -Syy
 	log "Installing base system packages..."
 	pacman -Syu --noconfirm --needed \
         	base base-devel linux linux-firmware amd-ucode efibootmgr grub man-db	
@@ -78,7 +81,11 @@ install_aur_helper() {
 
 # install aur packages
 install_aur_packages() {
-	return 0	
+	log "Syncing AUR databases..."
+	sudo -u qaffe  yay -Syy
+	log "Installing AUR packages..."
+	sudo -u qaffe  yay -S --noconfirm --needed \
+		lswt spotify phinger-cursors vesktop xdg-desktop-portal-termfilechooser-hunkyburrito-git
 }
 
 # other minor tweaks
