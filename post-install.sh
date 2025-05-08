@@ -58,7 +58,7 @@ install_packages() {
         	starship figlet neofetch hyfetch zsh
 	log "Installing CLI utilities and development tools..."
 	pacman -S --noconfirm --needed \
-		brightnessctl corectrl smartmontools stow wget rust jq yazi \
+		brightnessctl lact smartmontools stow wget rust jq yazi \
 		btop htop hyprpolkitagent vim neovim ripgrep
 	log "Installing miscellaneous tools..."
 	pacman -S --noconfirm --needed \
