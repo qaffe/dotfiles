@@ -47,7 +47,7 @@ install_packages() {
 	log "Installing user applications..."
 	pacman -S --noconfirm --needed \
         	firefox kitty keepassxc libreoffice-still obs-studio godot blender steam wine \
-        	qutebrowser torbrowser-launcher openrgb gamescope
+        	mpv qutebrowser torbrowser-launcher openrgb gamescope
 	log "Installing audio stack (PipeWire)..."
 	pacman -S --noconfirm --needed \
         	pipewire pipewire-alsa pipewire-jack pipewire-pulse \
@@ -55,7 +55,7 @@ install_packages() {
 	log "Installing shell enhancements and fonts..."
 	pacman -S --noconfirm --needed \
         	noto-fonts noto-fonts-cjk ttf-hack \
-        	starship figlet neofetch hyfetch zsh
+        	starship figlet fastfetch hyfetch zsh
 	log "Installing CLI utilities and development tools..."
 	pacman -S --noconfirm --needed \
 		brightnessctl lact smartmontools stow wget rust jq yazi \
