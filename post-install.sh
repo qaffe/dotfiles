@@ -43,11 +43,11 @@ install_packages() {
 	pacman -S --noconfirm --needed \
         	river waybar swaybg fuzzel grim slurp wl-clipboard \
         	xdg-desktop-portal xdg-desktop-portal-gnome xdg-desktop-portal-gtk xdg-desktop-portal-wlr \
-        	xdg-user-dirs xdg-utils
+        	xdg-user-dirs xdg-utils 
 	log "Installing user applications..."
 	pacman -S --noconfirm --needed \
         	firefox kitty keepassxc libreoffice-still obs-studio godot blender steam wine \
-        	mpv qutebrowser torbrowser-launcher openrgb gamescope
+        	qemu mpv qutebrowser torbrowser-launcher openrgb gamescope
 	log "Installing audio stack (PipeWire)..."
 	pacman -S --noconfirm --needed \
         	pipewire pipewire-alsa pipewire-jack pipewire-pulse \
@@ -58,8 +58,9 @@ install_packages() {
         	starship figlet fastfetch hyfetch zsh
 	log "Installing CLI utilities and development tools..."
 	pacman -S --noconfirm --needed \
-		brightnessctl lact smartmontools stow wget rust jq yazi \
-		btop htop hyprpolkitagent vim neovim ripgrep
+		brightnessctl lact smartmontools stow wget rustup jq yazi \
+		dosfstools gnu-efi btop htop hyprpolkitagent vim neovim ripgrep \
+		mtools xorriso cdrtools lld
 	log "Installing miscellaneous tools..."
 	pacman -S --noconfirm --needed \
 		unzip 7zip kanshi mangohud gnome-keyring
@@ -85,7 +86,7 @@ install_aur_packages() {
 	sudo -u qaffe  yay -Syy
 	log "Installing AUR packages..."
 	sudo -u qaffe  yay -S --noconfirm --needed \
-		lswt spotify phinger-cursors vesktop xdg-desktop-portal-termfilechooser-hunkyburrito-git
+		lswt spotify phinger-cursors vesktop xdg-desktop-portal-termfilechooser-hunkyburrito-git \
 }
 
 # other minor tweaks

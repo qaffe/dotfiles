@@ -6,8 +6,7 @@ return {
 			{"williamboman/mason-lspconfig.nvim"},
 		},
 		config = function()
-			local lspconfig = require("lspconfig")
-			lspconfig.lua_ls.setup({
+			vim.lsp.config("lua_ls", {
 				capabilities = require("cmp_nvim_lsp").default_capabilities(),
 				settings = {
 					Lua = {
@@ -23,10 +22,17 @@ return {
 					},
 				},
 			})
-
-			lspconfig.pylsp.setup({
+			vim.lsp.enable("lua_ls")
+			vim.lsp.config("rust_analyzer", {
+				settings = {
+					["rust_analyzer"] = {},
+				},
+			})
+			vim.lsp.enable("rust_analyzer")
+			vim.lsp.config("pylsp", {
 				capabilities = require("cmp_nvim_lsp").default_capabilities(),
 			})
+			vim.lsp.enable("pylsp")
 		end
 	}
 }
