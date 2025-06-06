@@ -86,7 +86,7 @@ install_aur_packages() {
 	sudo -u qaffe  yay -Syy
 	log "Installing AUR packages..."
 	sudo -u qaffe  yay -S --noconfirm --needed \
-		lswt spotify phinger-cursors vesktop xdg-desktop-portal-termfilechooser-hunkyburrito-git \
+		lswt phinger-cursors vesktop xdg-desktop-portal-termfilechooser-hunkyburrito-git \
 }
 
 # other minor tweaks
