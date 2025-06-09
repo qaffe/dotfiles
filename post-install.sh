@@ -63,7 +63,7 @@ install_packages() {
 		mtools xorriso cdrtools lld
 	log "Installing miscellaneous tools..."
 	pacman -S --noconfirm --needed \
-		unzip 7zip kanshi mangohud gnome-keyring
+		unzip 7zip kanshi mangohud gnome-keyring proxychains-ng
 }
 
 # install aur helper
@@ -86,7 +86,8 @@ install_aur_packages() {
 	sudo -u qaffe  yay -Syy
 	log "Installing AUR packages..."
 	sudo -u qaffe  yay -S --noconfirm --needed \
-		lswt phinger-cursors vesktop xdg-desktop-portal-termfilechooser-hunkyburrito-git
+		lswt phinger-cursors vesktop xdg-desktop-portal-termfilechooser-hunkyburrito-git \
+		python-tornet
 }
 
 # other minor tweaks
