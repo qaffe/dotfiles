@@ -47,7 +47,7 @@ install_packages() {
 	log "Installing user applications..."
 	pacman -S --noconfirm --needed \
         	firefox kitty keepassxc libreoffice-still obs-studio godot blender steam wine \
-        	qemu mpv qutebrowser torbrowser-launcher openrgb gamescope ardour
+        	qemu mpv qutebrowser torbrowser-launcher openrgb gamescope ardour obsidian
 	log "Installing audio stack (PipeWire)..."
 	pacman -S --noconfirm --needed \
         	pipewire pipewire-alsa pipewire-jack pipewire-pulse \
