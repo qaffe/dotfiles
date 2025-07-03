@@ -1,1 +1,1 @@
-exec river
+exec hyprland
