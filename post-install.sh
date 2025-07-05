@@ -43,7 +43,7 @@ install_packages() {
 	pacman -S --noconfirm --needed \
         	hyprland waybar hyprpaper hyprshot fuzzel wl-clipboard \
         	xdg-desktop-portal xdg-desktop-portal-gnome xdg-desktop-portal-gtk xdg-desktop-portal-wlr \
-        	xdg-user-dirs xdg-utils 
+        	xdg-desktop-portal-hyprland xdg-user-dirs xdg-utils 
 	log "Installing user applications..."
 	pacman -S --noconfirm --needed \
         	firefox kitty keepassxc libreoffice-still obs-studio godot blender steam wine \
