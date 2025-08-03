@@ -46,7 +46,7 @@ install_packages() {
         	xdg-desktop-portal-hyprland xdg-user-dirs xdg-utils 
 	log "Installing user applications..."
 	pacman -S --noconfirm --needed \
-        	firefox kitty keepassxc libreoffice-still obs-studio godot steam wine \
+        	firefox kitty keepassxc libreoffice-still obs-studio godot-mono steam wine \
         	qemu mpv qutebrowser torbrowser-launcher openrgb gamescope ardour obsidian
 	log "Installing audio stack (PipeWire)..."
 	pacman -S --noconfirm --needed \
