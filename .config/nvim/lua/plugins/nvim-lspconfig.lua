@@ -33,6 +33,10 @@ return {
 				capabilities = require("cmp_nvim_lsp").default_capabilities(),
 			})
 			vim.lsp.enable("pylsp")
+			vim.lsp.config("omnisharp", {
+				capabilities = require("cmp_nvim_lsp").default_capabilities(),
+			})
+			vim.lsp.enable("omnisharp")
 		end
 	}
 }

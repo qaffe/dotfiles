@@ -31,3 +31,8 @@ vim.api.nvim_create_autocmd("VimEnter", { -- runs after the editor is ready
 	end,
 })
 
+-- start server for godot
+local pipepath = vim.fn.stdpath("cache") .. "/server.pipe"
+if not vim.loop.fs_stat(pipepath) then
+  vim.fn.serverstart(pipepath)
+end

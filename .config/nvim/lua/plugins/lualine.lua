@@ -28,7 +28,6 @@ return {
 				sections = {
 					lualine_a = {
 						{
-							"buffers",
 						},
 					},
 				},
