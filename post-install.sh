@@ -35,7 +35,7 @@ install_packages() {
         	base base-devel linux linux-firmware amd-ucode efibootmgr grub man-db	
 	log "Installing drivers and graphics stack..."
 	pacman -S --noconfirm --needed \
-		mesa vulkan-radeon xf86-video-amdgpu xf86-video-vmware 
+		mesa vulkan-radeon xf86-video-amdgpu 
 	log "Installing networking tools..."
 	pacman -S --noconfirm --needed \
 		wireless_tools iwd wpa_supplicant openssh ufw syncthing
@@ -87,7 +87,6 @@ install_aur_packages() {
 	log "Installing AUR packages..."
 	sudo -u qaffe  yay -S --noconfirm --needed \
 		lswt phinger-cursors vesktop xdg-desktop-portal-termfilechooser-hunkyburrito-git \
-		python-tornet
 }
 
 # other minor tweaks
