@@ -47,7 +47,7 @@ install_packages() {
 	log "Installing user applications..."
 	pacman -S --noconfirm --needed \
         	firefox kitty keepassxc libreoffice-still obs-studio godot-mono steam wine \
-        	qemu mpv qutebrowser torbrowser-launcher openrgb gamescope ardour obsidian
+        	qemu mpv qutebrowser torbrowser-launcher openrgb gamescope ardour obsidian prismlauncher
 	log "Installing audio stack (PipeWire)..."
 	pacman -S --noconfirm --needed \
         	pipewire pipewire-alsa pipewire-jack pipewire-pulse \
@@ -87,7 +87,7 @@ install_aur_packages() {
 	log "Installing AUR packages..."
 	sudo -u qaffe  yay -S --noconfirm --needed \
 		lswt phinger-cursors vesktop xdg-desktop-portal-termfilechooser-hunkyburrito-git \
-		minecraft-launcher
+		minecraft-launcher spotube-bin
 }
 
 # other minor tweaks
