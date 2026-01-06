@@ -87,7 +87,7 @@ install_aur_packages() {
 	log "Installing AUR packages..."
 	sudo -u qaffe  yay -S --noconfirm --needed \
 		lswt phinger-cursors vesktop xdg-desktop-portal-termfilechooser-hunkyburrito-git \
-		minecraft-launcher spotube-bin
+		minecraft-launcher
 }
 
 # other minor tweaks
