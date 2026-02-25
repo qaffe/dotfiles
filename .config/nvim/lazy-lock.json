@@ -6,7 +6,6 @@
   "cmp-nvim-lsp": { "branch": "main", "commit": "cbc7b02bb99fae35cb42f514762b89b5126651ef" },
   "cmp-path": { "branch": "main", "commit": "c642487086dbd9a93160e1679a1327be111cbc25" },
   "cmp_luasnip": { "branch": "master", "commit": "98d9cb5c2c38532bd9bdb481067b20fea8f32e90" },
-  "cord.nvim": { "branch": "master", "commit": "6a0c0387abd4a4d1e65d6e83a274452a91f9ccd2" },
   "dashboard-nvim": { "branch": "master", "commit": "0775e567b6c0be96d01a61795f7b64c1758262f6" },
   "friendly-snippets": { "branch": "main", "commit": "6cd7280adead7f586db6fccbd15d2cac7e2188b9" },
   "indent-blankline.nvim": { "branch": "master", "commit": "d28a3f70721c79e3c5f6693057ae929f3d9c0a03" },
@@ -30,5 +29,5 @@
   "shipwright.nvim": { "branch": "master", "commit": "e596ab48328c31873f4f4d2e070243bf9de16ff3" },
   "telescope-themes": { "branch": "main", "commit": "65721365bd7a04a6c9679e76b6387b60320fd5f3" },
   "telescope.nvim": { "branch": "master", "commit": "5255aa27c422de944791318024167ad5d40aad20" },
-  "yazi.nvim": { "branch": "main", "commit": "331cadf187bd0c0676904b9e1cd1069cc00279bd" }
+  "yazi.nvim": { "branch": "main", "commit": "ebcc774362f98e21624dfeab3cdedd9fcfe337d7" }
 }

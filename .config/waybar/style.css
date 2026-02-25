@@ -55,20 +55,9 @@ window#waybar {
 	text-shadow: none;
 }
 
-/* UNCOMMENT IF USING NIRI */
-/* #workspaces button.active {
-	border-color: #555555;
-} */
-
-/* COMMENT IF USING NIRI */
 #workspaces button.active {
 	border-color: #ff9eff;
 }
-
-/* UNCOMMENT IF USING NIRI */
-/* #workspaces button.focused {
-	border-color: #ff9eff;
-} */
 
 #network.disconnected {
 	border-color: #ff6e6e;
@@ -79,4 +68,18 @@ window#waybar {
 	border-bottom: 4px;
 	border-color: #161514;
 	border-style: solid;
+}
+
+#tray {
+	padding: 2px;
+	color: #161514;
+	background-color: #161514;
+	border-bottom: 4px;
+	border-style: solid;
+	border-color: #161514;
+}
+
+#tray > .needs-attention {
+	-gtk-icon-effect: highlight;
+	background-color: #ff6e6e;
 }
