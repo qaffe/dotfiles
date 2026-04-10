@@ -1,1 +1,1 @@
-exec start-hyprland
+#exec start-hyprland

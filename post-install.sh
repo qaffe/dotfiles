@@ -32,21 +32,21 @@ install_packages() {
 	pacman -Syy
 	log "Installing base system packages..."
 	pacman -Syu --noconfirm --needed \
-        	base base-devel linux linux-firmware amd-ucode efibootmgr grub man-db	
+        	base base-devel linux linux-firmware amd-ucode efibootmgr grub man-db
 	log "Installing drivers and graphics stack..."
 	pacman -S --noconfirm --needed \
 		mesa vulkan-radeon xf86-video-amdgpu 
 	log "Installing networking tools..."
 	pacman -S --noconfirm --needed \
-		wireless_tools iwd wpa_supplicant openssh ufw syncthing
+		wireless_tools iwd wpa_supplicant openssh ufw syncthing networkmanager protonmail-bridge
 	log "Installing Wayland environment and core components..."
 	pacman -S --noconfirm --needed \
-        	hyprland waybar hyprpaper hyprshot fuzzel wl-clipboard \
+        	hyprland waybar hyprpaper hyprshot mako fuzzel wl-clipboard \
         	xdg-desktop-portal xdg-desktop-portal-gnome xdg-desktop-portal-gtk xdg-desktop-portal-wlr \
         	xdg-desktop-portal-hyprland xdg-user-dirs xdg-utils 
 	log "Installing user applications..."
 	pacman -S --noconfirm --needed \
-        	firefox kitty keepassxc libreoffice-still obs-studio godot-mono steam wine \
+        	firefox kitty keepassxc libreoffice-still obs-studio godot-mono steam wine thunderbird \
         	qemu mpv qutebrowser torbrowser-launcher openrgb gamescope ardour obsidian prismlauncher
 	log "Installing audio stack (PipeWire)..."
 	pacman -S --noconfirm --needed \
@@ -92,7 +92,8 @@ install_aur_packages() {
 
 # other minor tweaks
 tweak_system() {
-	return 0
+	systemctl enable ly@tty1.service
+	systemctl enable NetworkManager.service
 }
 
 main() {
