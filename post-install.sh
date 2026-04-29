@@ -54,7 +54,7 @@ install_packages() {
         	wireplumber pavucontrol gst-plugin-pipewire libpulse
 	log "Installing shell enhancements and fonts..."
 	pacman -S --noconfirm --needed \
-        	noto-fonts noto-fonts-cjk ttf-hack \
+        	noto-fonts noto-fonts-cjk noto-fonts-emoji ttf-hack \
         	starship figlet fastfetch hyfetch zsh
 	log "Installing CLI utilities and development tools..."
 	pacman -S --noconfirm --needed \
