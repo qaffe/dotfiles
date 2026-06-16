@@ -290,6 +290,12 @@ hl.bind(mainMod .. " + L", hl.dsp.focus({ direction = "right" }))
 hl.bind(mainMod .. " + K",    hl.dsp.focus({ direction = "up" }))
 hl.bind(mainMod .. " + J",  hl.dsp.focus({ direction = "down" }))
 
+-- Move windows with mainMod + SHIFT + HJKL
+hl.bind(mainMod .. " + SHIFT + H",  hl.dsp.window.move({ direction = "left" }))
+hl.bind(mainMod .. " + SHIFT + L", hl.dsp.window.move({ direction = "right" }))
+hl.bind(mainMod .. " + SHIFT + K",    hl.dsp.window.move({ direction = "up" }))
+hl.bind(mainMod .. " + SHIFT + J",  hl.dsp.window.move({ direction = "down" }))
+
 -- Switch workspaces with mainMod + [0-9]
 -- Move active window to a workspace with mainMod + SHIFT + [0-9]
 for i = 1, 10 do
@@ -333,6 +339,19 @@ hl.bind("XF86AudioPrev",  hl.dsp.exec_cmd("playerctl previous"),   { locked = tr
 -- and https://wiki.hypr.land/Configuring/Basics/Workspace-Rules/
 
 -- Example window rules that are useful
+
+hl.workspace_rule({ workspace = "1", monitor = "DP-1" })
+hl.workspace_rule({ workspace = "2", monitor = "DP-1" })
+hl.workspace_rule({ workspace = "3", monitor = "DP-1" })
+hl.workspace_rule({ workspace = "4", monitor = "DP-1" })
+
+hl.workspace_rule({ workspace = "5", monitor = "DP-2" })
+hl.workspace_rule({ workspace = "6", monitor = "DP-2" })
+hl.workspace_rule({ workspace = "7", monitor = "DP-2" })
+hl.workspace_rule({ workspace = "8", monitor = "DP-2" })
+
+hl.workspace_rule({ workspace = "9", monitor = "HDMI-A-1" })
+hl.workspace_rule({ workspace = "10", monitor = "HDMI-A-1" })
 
 local suppressMaximizeRule = hl.window_rule({
     -- Ignore maximize requests from all apps. You'll probably like this.
