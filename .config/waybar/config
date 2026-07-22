@@ -32,6 +32,13 @@
 	"tooltip": false
 },
 
+"hyprland/workspaces": {
+     "format": "{icon}",
+     "move-to-monitor": true,
+     "on-scroll-up": "hyprctl dispatch workspace e+1",
+     "on-scroll-down": "hyprctl dispatch workspace e-1"
+},
+
 "wlr/taskbar": {
 	"format": "{icon}",
 	"spacing": 3,
