@@ -51,7 +51,7 @@ install_packages() {
 	log "Installing audio stack (PipeWire)..."
 	pacman -S --noconfirm --needed \
         	pipewire pipewire-alsa pipewire-jack pipewire-pulse \
-        	wireplumber pavucontrol gst-plugin-pipewire libpulse
+        	wireplumber pavucontrol gst-plugin-pipewire libpulse easyeffects
 	log "Installing shell enhancements and fonts..."
 	pacman -S --noconfirm --needed \
         	noto-fonts noto-fonts-cjk noto-fonts-emoji ttf-hack \
