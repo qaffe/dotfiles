@@ -87,8 +87,7 @@ install_aur_packages() {
 	sudo -u qaffe  yay -Syy
 	log "Installing AUR packages..."
 	sudo -u qaffe  yay -S --noconfirm --needed \
-		lswt phinger-cursors vesktop xdg-desktop-portal-termfilechooser-hunkyburrito-git \
-		minecraft-launcher prismlauncher fluxer-bin
+		lswt phinger-cursors vesktop minecraft-launcher prismlauncher fluxer-bin
 }
 
 # other minor tweaks
